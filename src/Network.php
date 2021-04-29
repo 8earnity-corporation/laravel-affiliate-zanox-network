@@ -185,7 +185,7 @@ class Network extends AbstractNetwork implements NetworkContract
             floatval($product['price']),
             $product['currency'],
             $this->getDetailsUrl($product),
-            static::getTrackingUrl($this->trackingCode, ['trackingUrl' => $this->getDetailsUrl($product)]),
+            static::getTrackingUrl((string) $this->trackingCode, ['trackingUrl' => $this->getDetailsUrl($product)]),
             $product
         );
     }
